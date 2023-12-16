@@ -1,5 +1,5 @@
 import { HttpStatus } from '@nestjs/common';
-import { SuccessResponseEntity } from '../../serializers/responses/success';
+import { SuccessResponseEntity } from '../serializers/responses/success';
 
 /**
  * Create success response and return a transformed response object.

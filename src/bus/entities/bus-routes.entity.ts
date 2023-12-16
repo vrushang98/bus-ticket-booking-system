@@ -1,7 +1,8 @@
 import { BaseColumnsEntity } from 'src/common/entities/base.entity';
-import { Column, JoinColumn, ManyToOne } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 import { BusEntity } from './bus.entity';
 
+@Entity()
 export class BusRoutesEntity extends BaseColumnsEntity {
   @Column()
   routeName: string;
@@ -12,10 +13,10 @@ export class BusRoutesEntity extends BaseColumnsEntity {
   @Column()
   arrivalPlace: string;
 
-  @Column({ type: 'timestamp' })
+  @Column({ type: 'time' })
   departureTime: Date;
 
-  @Column({ type: 'timestamp' })
+  @Column({ type: 'time' })
   arrivalTime: Date;
 
   @ManyToOne(() => BusEntity, (bus) => bus.busRoutes)

@@ -1,5 +1,5 @@
 import { HttpStatus } from '@nestjs/common';
-import { ErrorResponseEntity } from '../../serializers/responses/error';
+import { ErrorResponseEntity } from '../serializers/responses/error';
 
 /**
  * Create error response and return a transformed response object.
